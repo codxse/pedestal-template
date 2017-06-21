@@ -12,4 +12,7 @@ pom.xml.asc
 .idea
 *.log
 *.iml
+/resources/public/js/compiled
+/log
+/out
 
