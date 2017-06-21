@@ -1,16 +1,20 @@
 (ns user
   (:require [reloaded.repl :as rr]
             [clojure.pprint :refer [pprint]]
-            [app.system :refer [system]]
-            [dev :refer [env]]))
+            [clojure.tools.namespace.repl :refer [set-refresh-dirs]]
+            [dev]))
 
-(rr/set-init! #(system env))
+;(set! *print-length* 100)
+(set-refresh-dirs "src" "dev")
+(rr/set-init! #(dev/dev-system))
 
 (defn start [] (rr/start))
 (defn stop [] (rr/stop))
 (defn go [] (rr/go))
 (defn reset [] (rr/reset))
 (defn reset-all [] (rr/reset-all))
+
+(defn cljs-repl [] (dev/cljs-repl rr/system))
 
 (defn system-map []
   (into {} rr/system))
