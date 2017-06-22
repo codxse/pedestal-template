@@ -17,7 +17,7 @@ There are three types of environment `dev`, `prod`, and `test`. The configuratio
 
 ## Usage
 
-The initial ns is `user` namespace. Fell free to `go,` `start`, `stop`, and `reset`
+The initial ns is `user` namespace. Feel free to run `go,` `start`, `stop`, and `reset`
 
 ```clojure
 (go)
