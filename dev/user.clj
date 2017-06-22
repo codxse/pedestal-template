@@ -14,7 +14,9 @@
 (defn reset [] (rr/reset))
 (defn reset-all [] (rr/reset-all))
 
-(defn cljs-repl [] (dev/cljs-repl rr/system))
+(defn cljs-repl []
+  (reset-all)
+  (dev/cljs-repl rr/system))
 
 (defn system-map []
   (into {} rr/system))
